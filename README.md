@@ -82,3 +82,53 @@ Techniques used by nodes to transfer data from A to B
 14. Encoding data into a universal language – **presentation**
 ### Application
 15. Manage application rules (depends on the application) - **application**
+
+## Layered structure
+- Each layer is based on the previous one
+- Each layer pass information to upper layer
+### OSI
+![OSI Reference](https://user-images.githubusercontent.com/19282069/116220646-292bf880-a74d-11eb-90a2-43466cbe6d82.png)
+
+The model has 7 layers
+## Software layers
+### Application Layer
+#### Many protocols
+- HTTP: Web
+- FTP: Files
+- SMTP: Mails
+
+### Presentation Layer
+#### Functions
+- Encryption 
+- Translation
+- Compression
+
+### Session Layer
+#### Functions
+- Dialogue control
+- Recovery points
+- Backtracking
+- Orchestration
+
+## Transport layer (heart of OSI)
+### Transport Layer
+Establish connection between to ports to end-to-end delivery.    
+#### Functions 
+- Segmentation and reassembly 
+- Connection Control
+- Multiplexing and Demultiplexing
+- Flow control
+- Error control
+
+## Hardware layers
+### Network Layer
+- Control the operation of the subnet.     
+- Deliver packets from source to destination.     
+- On same network communication, the *Network Layer* is almost inexistant.
+### Data-link Layer
+- Establish, maintain and release data-link connection from entities
+- Detect and correct error from *Physical layer*
+- Delimit and synchronize data frames
+### Physical Layer
+- Mechanical, electrical and functional means
+- Communicate with bits
