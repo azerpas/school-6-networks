@@ -125,10 +125,19 @@ Establish connection between to ports to end-to-end delivery.
 - Control the operation of the subnet.     
 - Deliver packets from source to destination.     
 - On same network communication, the *Network Layer* is almost inexistant.
+```c
+// Exchanged unit: Packet
+```
 ### Data-link Layer
 - Establish, maintain and release data-link connection from entities
 - Detect and correct error from *Physical layer*
 - Delimit and synchronize data frames
+```c
+// Exchanged unit: Frame
+```
 ### Physical Layer
 - Mechanical, electrical and functional means
 - Communicate with bits
+```c
+// Exchanged unit: bits
+```
