@@ -2,7 +2,7 @@
 
 ## Summary
 1. Main concepts
-2. Physical layer
+2. [Physical Layer](#physical-layer)
 3. Data-link layer
 4. Network layer
 5. Transport layer
@@ -120,7 +120,7 @@ Establish connection between to ports to end-to-end delivery.
 - Flow control
 - Error control
 
-## Hardware layers
+# Hardware layers
 ### Network Layer
 - Control the operation of the subnet.     
 - Deliver packets from source to destination.     
@@ -135,9 +135,46 @@ Establish connection between to ports to end-to-end delivery.
 ```c
 // Exchanged unit: Frame
 ```
-### Physical Layer
+## Physical Layer
 - Mechanical, electrical and functional means
-- Communicate with bits
+- Communicate with bits through signals
 ```c
 // Exchanged unit: bits
 ```
+1. Digital data     
+Information bits    
+**Example:** LAN     
+**Encodings:** NRZ, NRZI, Manchester
+
+2. Anological data  
+Voltage    
+**Example:** Voice channel
+
+### Cable specifications
+- **Speed**:    
+Influenced by medium
+- **Distance**:     
+Influence degradation and attenuation
+
+### Bandwidth
+- Amount of information that can be transmitted   
+**bit/s**
+- **Example:** ADSL
+
+### Ethernet
+- Several Ethernet variant exist and differ in: 
+    - **Type of support** (UTP, STP, Coax, Fiber)
+    - **Topology** (Bus, Star, Tree)
+    - **Rate** (1, 5, 10, 100 Mbps, 1 Gbps, 10 Gbps, 100 Gbps)
+- **Example:** 100 base F = Optical Fiber
+
+### Network transmission parameters
+- Propagation time
+- Data emission rate 
+- Emission time
+- Data transfer rate
+- Transfer time
+
+## Medium access protocols (Physical & Data-Link Layers)
+
+1. 
