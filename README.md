@@ -166,7 +166,13 @@ Influence degradation and attenuation
     - **Type of support** (UTP, STP, Coax, Fiber)
     - **Topology** (Bus, Star, Tree)
     - **Rate** (1, 5, 10, 100 Mbps, 1 Gbps, 10 Gbps, 100 Gbps)
-- **Example:** 100 base F = Optical Fiber
+- **Example:** 100 base F = Optical Fiber   
+
+**Ethernet is the dominant LAN tech**
+- Simplicity and ease of maintenance
+- Ability to incorporate new techs
+- Reliability
+- Low cost of installation and upgrate 
 
 ### Network transmission parameters
 - Propagation time
@@ -177,4 +183,46 @@ Influence degradation and attenuation
 
 ## Medium access protocols (Physical & Data-Link Layers)
 
-1. 
+**2 approaches**     
+1. Random allocation: access time **not** limited
+2. Deterministic allocation: access time limited
+
+### CSMA
+
+Todo
+
+### Identify a machine in the network
+
+#### Universal Address Mac
+- 6 bytes address (48bits)
+- Unique to each network card
+- = Contructor card + sequence number
+
+### Ethernet frame structure
+![Ethernet frame](https://user-images.githubusercontent.com/19282069/116580141-604c0680-a913-11eb-859e-0e817f8482b3.png)
+
+### How does it work?
+1. Send 64 bits of synchronization data (*preambule*)
+    1. Destination & Source addresses
+    2. Type of Protocol **or** Length of data
+    3. The payload
+    4. Send the FCS (Frame Check Sequence) on the fly
+2. On receiving
+    1. Check if it match the MAC address
+    2. Calculate and check if it match given FCS
+    3. If valid, data forwarded to next layer (network)
+
+# Interconnection 
+## Level 1 interconnection   
+**o Repeater, Hub:** signal amplification and broadcast
+- Allow more hosts
+- Can cause **collision** if too much trafic (hosts)
+### Ethernet Switching
+- if machines.length increases, the increasing number of collisions can significantly reduce network performance
+- to limit the effects collision domains must be created by installing bridges (Bridge) or switches (Switch)
+* Level 2 interconnection   
+**o Bridge, switch:** signal amplifier and level 2 processing (frame switching)
+* Level 3 interconnection   
+**o Router**
+* Level 4 to 7 interconnection  
+**o Gateway**
