@@ -270,3 +270,29 @@ Used to identity each machine on a network
 - identifier: machine identifier
 
 ![example](https://user-images.githubusercontent.com/19282069/116785192-87801080-aa98-11eb-8fcb-9486ea4d4c01.png)
+
+**One network ID per physical network**
+![example](https://user-images.githubusercontent.com/19282069/116785236-b8f8dc00-aa98-11eb-9b61-0c7361680314.png)
+
+## Multiple classes
+
+### A
+`0.0.0.0` to `127.255.255.255`
+### B 
+`128.0.0.0` to `191.255.255.255`
+### C 
+`192.0.0.0` to `223.255.255.255`
+### D (multicast)
+`224.0.0.0` to `239.255.255.255`
+### E (reserved)
+`240.0.0.0` to `255.255.255.255`
+
+## Address mask
+The mask indicates the border between the `<network>` part and the `<machine>`  
+`255.255.255.0` = `..../24`     
+- `1` network
+- `0` machine
+
+## IP addresses (example)
+![Example](https://user-images.githubusercontent.com/19282069/116785475-0de92200-aa9a-11eb-83e8-e32e777ff340.png)
+![1](https://user-images.githubusercontent.com/19282069/116785726-67058580-aa9b-11eb-9ce8-56f0b2a36b05.png)
