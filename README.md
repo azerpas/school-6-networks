@@ -214,15 +214,59 @@ Todo
 
 # Interconnection 
 ## Level 1 interconnection   
-**o Repeater, Hub:** signal amplification and broadcast
+### **o Repeater, Hub:** signal amplification and broadcast
 - Allow more hosts
 - Can cause **collision** if too much trafic (hosts)
-### Ethernet Switching
+#### Ethernet Switching
 - if machines.length increases, the increasing number of collisions can significantly reduce network performance
 - to limit the effects collision domains must be created by installing bridges (Bridge) or switches (Switch)
-* Level 2 interconnection   
-**o Bridge, switch:** signal amplifier and level 2 processing (frame switching)
-* Level 3 interconnection   
-**o Router**
-* Level 4 to 7 interconnection  
+
+## Level 2 interconnection   
+### **o Bridge, switch:** signal amplifier and level 2 processing (frame switching)
+#### Bridge 
+Create single aggregated network from two network segments  
+```
+Hosts: A B C  
+Ports: 1 2 3
+-----
+Action: (A -> B)
+1. Bridge set address and port of A in table
+2. Check for destination in table -> not found
+3. Broadcast to all ports
+4. Both receive it, C pass, B decode it
+```
+#### Switch
+- Reduce collision to increase the data rate
+- Replaces central passive nodes (HUB)
+- Low cost Virtual Network (VLAN)
+
+#### Switching modes
+1. Cut-through  
+Forward as soon as the MAC address is known
+2. Store-and-forward    
+Wait to receive all data to procede to FCS then reject or send
+3. Fragment-free    
+Reads first 64 bytes and start transmitting while checking addresses
+## Level 3 interconnection   
+### **o Router**
+- Identification of entities by IP address
+- Hide heterogeneity of the supports by federating them
+- Provide a network layer protocol suitable for my medias (thanks to **ip protocol**)
+
+## Level 4 to 7 interconnection  
 **o Gateway**
+
+# IP Address
+Used to identity each machine on a network 
+#### Two types of addresses:
+1. Physical address (Data-Link)
+- Fixed by manufacturer and immutable
+- Only works in physical networks (ethernet)
+2. Logical address (**IP address**) 
+
+## Format
+`<network> <machine>`   
+- network prefix: network identifier 
+- identifier: machine identifier
+
+![example](https://user-images.githubusercontent.com/19282069/116785192-87801080-aa98-11eb-8fcb-9486ea4d4c01.png)
