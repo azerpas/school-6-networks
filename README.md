@@ -295,4 +295,6 @@ The mask indicates the border between the `<network>` part and the `<machine>`
 
 ## IP addresses (example)
 ![Example](https://user-images.githubusercontent.com/19282069/116785475-0de92200-aa9a-11eb-83e8-e32e777ff340.png)
-![1](https://user-images.githubusercontent.com/19282069/116785726-67058580-aa9b-11eb-9ce8-56f0b2a36b05.png)
+![1](https://user-images.githubusercontent.com/19282069/116808535-9e2a7400-ab39-11eb-81ce-7740e5a4d915.png)
+
+## Public vs Private address
