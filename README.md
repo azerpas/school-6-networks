@@ -317,3 +317,48 @@ Prefixes of IPv4 are assigned by the IANA: *Internet Assigned Numbers Authority*
 ## Subneting
 Multiple physical networks share one IP address
 ![subnet](https://user-images.githubusercontent.com/19282069/116810398-da62d200-ab43-11eb-8f19-15f603a56acf.png)
+3 subnetworks = 2^2, 4 possible subnetworks
+![example](https://user-images.githubusercontent.com/19282069/116814301-89110d80-ab58-11eb-8e20-f1bffa1a13b1.png)
+
+## VLSM (Variable Length Subnet Masks)
+
+![VLSM Example](https://user-images.githubusercontent.com/19282069/116814513-a4304d00-ab59-11eb-94d8-2eacec000777.png)
+
+## IP Packet Structure
+
+- Version *(4 bits)*
+- Internet Header Length *(4 bits)*
+- Total Length
+- Time to Live *(8 bits)*
+- Protocol 
+- Header Checksum
+
+# Fragmentation
+Split the packet into smaller fragments to respect *MTU* (Maximum Transfer Unit)
+- Splitting by layer 3 entities
+- Reassembly done at reception
+
+Works with:
+- Identification, common to all fragments
+- Flags *(3 bits)*, required for fragmentation
+- Offset
+
+![Example](https://user-images.githubusercontent.com/19282069/116815656-d1cbc500-ab5e-11eb-9b44-f37959f6bad4.png)
+
+# Transport Layer (UDP/TCP)
+
+2 protocols: 
+## UPD
+Connection-less protocol
+### Port
+The transfer is made from source port to destination port.  
+- Applications use *Socket API* to connect
+- Synchronous with queue
+### UDP Datagrams
+Consist of UDP Header and UDP Data
+1. with data protection
+2. without delivery confirmation
+## TCP
+- Sophisticated and reliable
+- Longer than UDP
+- Check data on receiption 
