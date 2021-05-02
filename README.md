@@ -298,3 +298,22 @@ The mask indicates the border between the `<network>` part and the `<machine>`
 ![1](https://user-images.githubusercontent.com/19282069/116808535-9e2a7400-ab39-11eb-81ce-7740e5a4d915.png)
 
 ## Public vs Private address
+
+### Private
+Some addresses are used in local **only**
+* Class A: `10.0.0.1` to `10.255.255.254`
+* Class B: `172.16.0.1` to `172.31.255.254`
+* Class C: `192.0.0.1` to `192.168.255.25`
+
+### Public
+Used online and known by the routers
+
+## NAT
+Map the local address into public address to communicate with the internet.
+
+## Address assignment
+Prefixes of IPv4 are assigned by the IANA: *Internet Assigned Numbers Authority*
+
+## Subneting
+Multiple physical networks share one IP address
+![subnet](https://user-images.githubusercontent.com/19282069/116810398-da62d200-ab43-11eb-8f19-15f603a56acf.png)
