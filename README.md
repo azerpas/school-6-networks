@@ -349,7 +349,8 @@ Works with:
 
 2 protocols: 
 ## UPD
-Connection-less protocol
+Connection-less protocol      
+Very fast protocol, we use it in all real-time communication (streaming, webcasting, video conference, gaming, VOIP)     
 ### Port
 The transfer is made from source port to destination port.  
 - Applications use *Socket API* to connect
@@ -361,4 +362,24 @@ Consist of UDP Header and UDP Data
 ## TCP
 - Sophisticated and reliable
 - Longer than UDP
-- Check data on receiption 
+- Check data on receiption
+- Error detection      
+### Usage     
+- Sending emails
+- Exchanging files
+- Internet
+### Sequencing
+- Every byte sent is numbered
+	- Number will help the receiver to reassemble data
+	- Thus, sending back corrupted or missed data 
+
+## Example
+PC1 ---------> SERVER     
+
+Source port is a random generated number.    
+Destination port corresponds to the application the client is trying to access.     
+We will be using port 25 to access email app.    
+### Three-way handshake
+1. SYN : Client is asking for sync
+2. SYN-ACK : Server is acknowledging
+3. ACK : Client is confirming
